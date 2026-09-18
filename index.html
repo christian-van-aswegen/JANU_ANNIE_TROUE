@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piet & Jan's Wedding Invitation</title>
+    <style>
+        /* --- Base & Mobile Frame Styling --- */
+        body {
+            margin: 0;
+            padding: 20px 0;
+            font-family: 'Georgia', serif;
+            color: #55443d;
+            /* Background image that stays fixed */
+            background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* This creates the phone-shaped container */
+        .phone-container {
+            width: 100%;
+            max-width: 400px; /* Restricts width to a typical phone size */
+            background: #fdfbf7;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            border: 8px solid #ffffff;
+        }
+
+        /* --- Scrollable Inner Content --- */
+        .phone-screen {
+            max-height: 85vh; /* Makes it scrollable inside the phone frame */
+            overflow-y: auto;
+            padding-bottom: 40px;
+        }
+
+        /* Hide ugly scrollbars for a clean app feel */
+        .phone-screen::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* --- Hero Header --- */
+        .hero {
+            background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552');
+            background-size: cover;
+            background-position: center;
+            height: 380px;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive, serif;
+            font-size: 3rem;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .date {
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
+        }
+
+        /* --- Content Sections --- */
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee5de;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7a685e;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #66554d;
+        }
+
+        /* Countdown Grid */
+        .countdown {
+            display: flex;
+            justify-content: space-around;
+            margin: 15px 0;
+        }
+
+        .countdown-box {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #4a3c35;
+        }
+
+        .countdown-box span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: normal;
+            color: #9c887d;
+            letter-spacing: 1px;
+            margin-top: 2px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #6b5b52;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #52443d;
+        }
+    </style>
+    <!-- Google Font for names script style -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="phone-container">
+        <div class="phone-screen">
+            
+            <!-- Hero Header -->
+            <div class="hero">
+                <div class="hero-overlay">
+                    <div class="subtitle">We're Getting Married</div>
+                    <h1>Piet & Jan</h1>
+                    <div class="date">29 . 11 . 2026</div>
+                </div>
+            </div>
+
+            <!-- Countdown Section -->
+            <div class="section">
+                <h2>Countdown</h2>
+                <div class="countdown">
+                    <div class="countdown-box">246 <span>DAYS</span></div>
+                    <div class="countdown-box">11 <span>HOURS</span></div>
+                    <div class="countdown-box">53 <span>MINS</span></div>
+                    <div class="countdown-box">06 <span>SECS</span></div>
+                </div>
+            </div>
+
+            <!-- Ceremony Section -->
+            <div class="section">
+                <h2>Ceremony</h2>
+                <p>16:00 PM<br>
+                <strong>Santa Maria Chapel</strong><br>
+                Ronda, Málaga</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+
+            <!-- Reception Section -->
+            <div class="section">
+                <h2>Reception</h2>
+                <p>18:30 PM<br>
+                <strong>Finca La Concepción</strong><br>
+                Marbella, Málaga</p>
+                <a href="#" class="btn">View Details</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
